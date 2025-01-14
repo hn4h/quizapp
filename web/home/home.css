@@ -216,6 +216,11 @@
     align-self: center;
 }
 
+.filter option {
+    font-weight: bold;
+    font-size: 12px;
+}
+
 .filter select:focus {
     border-color: #0077cc;
     outline: none;
