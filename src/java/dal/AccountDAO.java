@@ -266,32 +266,27 @@ public class AccountDAO extends DBContext{
 //        return false;
 //    }
 
-//    public Account checkEmail(String email) {
-//        String sql = "Select * from Accounts where email = ?";
-//        try {
-//            PreparedStatement st = connection.prepareStatement(sql);
-//            st.setString(1, email);
-//            ResultSet rs = st.executeQuery();
-//            if (rs.next()) {
-//                Account account = new Account();
-//                account.setUserName(rs.getString("username"));
-//                account.setHashedPassword(rs.getString("HashedPassword"));
-//                account.setAccountID(rs.getInt("accountID"));
-//                account.setCreatedDate(rs.getDate("createdDate"));
-//                account.setProfileImage(rs.getString("profileImage"));
-//                account.setRole(rs.getInt("role"));
-//                account.setPhoneNumber(rs.getString("phoneNumber"));
-//                account.setAddress(rs.getString("address"));
-//                account.setEmail(rs.getString("email"));
-//                account.setFirstName(rs.getString("firstName"));
-//                account.setLastName(rs.getString("lastName"));
-//                return account;
-//            }
-//        } catch (SQLException e) {
-//            System.out.println(e);
-//        }
-//        return null;
-//    }
+   public Account checkEmail(String email) {
+       String sql = "Select * from Accounts where email = ?";
+       try {
+           PreparedStatement st = connection.prepareStatement(sql);
+           st.setString(1, email);
+           ResultSet rs = st.executeQuery();
+           if (rs.next()) {
+               Account account = new Account();
+               account.setUserName(rs.getString("username"));
+               account.setHashedPassword(rs.getString("HashedPassword"));
+               account.setCreatedDate(rs.getDate("createdDate"));
+               account.setProfileImage(rs.getString("profileImage"));
+               account.setRole(rs.getInt("role"));
+               account.setEmail(rs.getString("email"));
+               return account;
+           }
+       } catch (SQLException e) {
+           System.out.println(e);
+       }
+       return null;
+   }
     public void resetPassword(String email, String newPassword) {
         String hashedPassword = PasswordUtil.hashPassword(newPassword);
         String sql = "Update Accounts set HashedPassword = ? where email = ?";

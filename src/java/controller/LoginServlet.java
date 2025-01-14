@@ -48,12 +48,11 @@ public class LoginServlet extends HttpServlet {
 
             Account a = d.checkEmail(acc.getEmail());
             if (a == null) {
-                d.createAccount(acc.getEmail(), acc.getEmail(), acc.getEmail(), acc.getGiven_name(), acc.getFamily_name());
+                d.createAccountByEmail(acc.getEmail());
                 a = d.checkEmail(acc.getEmail());
             }
             HttpSession session = request.getSession();
             session.setAttribute("account", a);
-            session.setAttribute("accountID", a.getAccountID());
             response.sendRedirect("home");
         }
     }
