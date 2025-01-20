@@ -34,7 +34,7 @@
                 <button>Upgrade</button>
             </div>
             <div class="login-btn">
-                <a href="login/login.jsp"><button id="openPopupButton" class="open-popup-btn">Log in</button></a>
+                <a href="login"><button id="openPopupButton" class="open-popup-btn">Log in</button></a>
             </div>
         </div>
     </div>
@@ -42,7 +42,7 @@
         <div class="side-bar">
             <div class="home-btn">
                 <i class="fa-solid fa-house"></i>
-                <a href=""><span>Home</span></a>
+                <a href="#"><span>Home</span></a>
             </div>
             <div class="history-btn">
                 <i class="fa-solid fa-clock-rotate-left"></i>

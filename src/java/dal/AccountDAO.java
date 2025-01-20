@@ -19,7 +19,7 @@ public class AccountDAO extends DBContext{
 //    public Account getAccountByEmail(String email) {
 //        String sql = "Select * from Accounts where email = ?";
 //        try {
-//            PreparedStatement st = connection.prepareStatement(sql);
+//            PreparedStatement st = connection.prepareStatement(sql)
 //            st.setString(1, email);
 //            ResultSet rs = st.executeQuery();
 //            if (rs.next()) {
@@ -99,6 +99,7 @@ public class AccountDAO extends DBContext{
         }
         return false;
     }
+    
 
     public int getNextAccountID() {
         String sql = "Select max(AccountID) from Accounts";

@@ -54,7 +54,7 @@ public class SignUpServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        request.getRequestDispatcher("client/signin.jsp").forward(request, response);
+        request.getRequestDispatcher("login/register.jsp").forward(request, response);
     } 
 
     /** 
@@ -70,7 +70,7 @@ public class SignUpServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String email = request.getParameter("email");
-        String rePassword = request.getParameter("repeatpassword");
+        String rePassword = request.getParameter("confirmPassword");
         AccountDAO dao = new AccountDAO();
         if (dao.checkUsername(username)) {
             request.setAttribute("error", "Username already exists");

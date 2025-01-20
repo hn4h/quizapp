@@ -73,7 +73,7 @@ public class LoginServlet extends HttpServlet {
         if (request.getParameter("code") != null) {
             processRequest(request, response);
         } else {
-            request.getRequestDispatcher("client/login.jsp").forward(request, response);
+            request.getRequestDispatcher("login/login.jsp").forward(request, response);
         }
     }
 
@@ -95,7 +95,7 @@ public class LoginServlet extends HttpServlet {
         Account a = d.checkAuthen(email, password);
         if (a == null) {
             request.setAttribute("error", "Invalid username or password");
-            request.getRequestDispatcher("client/login.jsp").forward(request, response);
+            request.getRequestDispatcher("login/login.jsp").forward(request, response);
         } else {
             HttpSession session = request.getSession();
             session.setAttribute("account", a);
