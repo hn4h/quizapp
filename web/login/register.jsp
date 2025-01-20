@@ -4,14 +4,14 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Register</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./login/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
     <div class="register-container">
         <div class="register-banner">
-            <img src="./images/banner_login.jpg" alt="Not found">
+            <img src="./login/images/banner_login.jpg" alt="Not found">
         </div>
         <div class="register-content">
             <div class="register-header">

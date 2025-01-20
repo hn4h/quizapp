@@ -53,7 +53,7 @@ public class TestServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        request.getRequestDispatcher("home/home.jsp").forward(request, response);
+        request.getRequestDispatcher("login/login.jsp").forward(request, response);
     } 
 
     /** 
