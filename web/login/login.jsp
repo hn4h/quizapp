@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./login/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
     <div class="login-container">
         <div class="login-banner">
-            <img src="./images/banner_login.jpg" alt="Not found">
+            <img src="./login/images/banner_login.jpg" alt="Not found">
         </div>
         <div class="login-content">
             <div class="login-header">
